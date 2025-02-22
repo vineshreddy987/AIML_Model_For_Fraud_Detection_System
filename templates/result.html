@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Transaction Analysis Result</h2>
+            
+            <div class="space-y-4">
+                <div class="flex justify-between">
+                    <span class="font-medium">Transaction Type:</span>
+                    <span>{{ result.transaction_type }}</span>
+                </div>
+                
+                <div class="flex justify-between">
+                    <span class="font-medium">Amount:</span>
+                    <span>${{ "%.2f"|format(result.amount) }}</span>
+                </div>
+                
+                <div class="flex justify-between">
+                    <span class="font-medium">Prediction:</span>
+                    <span class="{{ 'text-red-600' if result.prediction == 'Fraudulent' else 'text-green-600' }} font-bold">
+                        {{ result.prediction }}
+                    </span>
+                </div>
+                
+                <div class="flex justify-between">
+                    <span class="font-medium">Fraud Probability:</span>
+                    <span>{{ result.probability }}</span>
+                </div>
+                
+                <div class="flex justify-between">
+                    <span class="font-medium">Risk Level:</span>
+                    <span class="{{ 'text-red-600' if result.risk_level == 'High' else 'text-yellow-600' if result.risk_level == 'Medium' else 'text-green-600' }}">
+                        {{ result.risk_level }}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-md mx-auto md:max-w-2xl">
+            <a href="/" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Check Another Transaction
+            </a>
+        </div>
+    </div>
+</body>
+</html>
