@@ -94,7 +94,7 @@ Clone the Repository:
 
 bash
 Copy
-git clone https://github.com/afridsk0069/fraud-detection.git
+git clone https://github.com/vineshreddy987/AIML_Model_For_Fraud_Detection_System.git
 cd fraud-detection
 Install Dependencies:
 
