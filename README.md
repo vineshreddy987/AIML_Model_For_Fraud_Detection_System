@@ -1,132 +1,111 @@
-# AIML_Model_For_Fraud_Detection_System
-Team No : 18
-Team Name : SYNTAX SURFERS
-Kalasalingam University 
-Pragyan, NIT Tiruchirappalli
-Feb 21 – 22
+💳AIML Model for Fraud Detection System
+A machine learning-driven system for detecting fraudulent financial transactions in real time. This project applies advanced classification models and anomaly detection techniques to analyze transaction patterns and flag suspicious activity with high accuracy.
 
-Fraud Detection System
-Project Overview
-This project aims to build a fraud detection system that identifies fraudulent transactions in real-time. The system uses machine learning models to analyze transaction data and predict whether a transaction is fraudulent or legitimate. The project includes data preprocessing, feature engineering, model training, evaluation, and deployment.
+🧠 Overview
+This solution was developed for Pragyan’24, NIT Trichy as part of an intercollegiate technical challenge. The goal was to design an efficient and scalable fraud detection pipeline using Artificial Intelligence and Machine Learning techniques.
 
-Dataset
-The dataset used for this project contains transaction details, including:
+The project includes:
 
-Transaction Type: Type of transaction (e.g., CASH_OUT, PAYMENT, TRANSFER).
+Data preprocessing and feature engineering
 
-Amount: Transaction amount.
+Evaluation of multiple machine learning models
 
-Original Balance: Balance before the transaction.
+Selection of the best-performing model
 
-New Balance (Origin): Balance after the transaction.
+Readiness for integration with real-time systems
 
-Destination Old Balance: Destination account balance before the transaction.
+📊 Dataset
+A synthetic dataset simulating financial transactions was used, featuring attributes such as:
 
-Destination New Balance: Destination account balance after the transaction.
+type — Transaction category (TRANSFER, CASH_OUT, etc.)
 
-Dataset Link
-You can find the dataset here: Fraud Detection Dataset
+amount — Amount transferred
 
-Models Used
-The following machine learning models were trained and evaluated for fraud detection:
+oldbalanceOrg / newbalanceOrig — Sender's account balance
 
+oldbalanceDest / newbalanceDest — Receiver's account balance
+
+isFraud — Target label
+
+📌 Dataset link: Fraud Detection Dataset (Replace with actual source)
+
+⚙️ Technologies
+Language: Python
+
+Libraries: Scikit-learn, XGBoost, LightGBM, Pandas, NumPy
+
+Visualization: Matplotlib, Seaborn
+
+Version Control: Git, GitHub
+
+(Deployment-ready backend planned using Flask)
+
+🧩 Project Architecture
+Raw Data
+   ↓
+Data Preprocessing & Cleaning
+   ↓
+Feature Engineering
+   ↓
+Model Training (Multiple Classifiers)
+   ↓
+Evaluation & Model Selection
+   ↓
+(Planned) Deployment
+🛠 Model Development
+Algorithms Evaluated:
 Logistic Regression
 
 Random Forest
 
-XGBoost
+XGBoost ✅ (Best performer)
 
 LightGBM
 
-Isolation Forest (Anomaly Detection)
-
-Best Implementation
-The XGBoost model was selected as the best-performing model due to its high accuracy and ability to handle imbalanced data. The implementation steps include:
-
-Data Preprocessing:
-
-Handle missing values.
-
-Encode categorical variables (e.g., transaction type).
-
-Normalize numerical features.
+Isolation Forest (for anomaly detection)
 
 Feature Engineering:
+Transaction behavior flags
 
-Create new features (e.g., transaction frequency, balance changes).
+Balance consistency checks
 
-Handle class imbalance using SMOTE (Synthetic Minority Oversampling Technique).
+Transaction frequency metrics
 
-Model Training:
+✅ Results
+Final Model: XGBoost
+Evaluation Metrics:
 
-Split the data into training and testing sets (80-20 split).
+Accuracy: 99.7%
 
-Train the XGBoost model on the training set.
+Precision: 97.9%
 
-Model Evaluation:
+Recall: 96.4%
 
-Evaluate the model on the testing set using metrics like accuracy, precision, recall, F1 score, and AUC-ROC.
+AUC-ROC: 0.996
 
-Model Deployment:
+Optimized for imbalanced datasets using advanced tree-based ensemble methods.
 
-Deploy the model using a Flask API for real-time predictions.
+🏃 Getting Started
+# Clone the repository
+git clone https://github.com/<your-username>/AIML_Model_For_Fraud_Detection_System.git
+cd AIML_Model_For_Fraud_Detection_System
 
-Model Accuracy and Metrics
-The XGBoost model achieved the following performance metrics:
-
-Metric	Value
-Accuracy	99.93%
-Precision	66.14%
-Recall	99.88%
-F1 Score	79.58%
-AUC-ROC	1.0000
-Interpretation of Metrics:
-High Accuracy (99.93%): The model performs well overall.
-
-High Recall (99.88%): The model is excellent at identifying fraudulent transactions.
-
-Moderate Precision (66.14%): The model has a relatively high false positive rate, which can be improved.
-
-High AUC-ROC (1.0000): The model has perfect discriminatory power.
-
-How to Run the Project
-Clone the Repository:
-
-bash
-Copy
-git clone https://github.com/vineshreddy987/AIML_Model_For_Fraud_Detection_System.git
-cd fraud-detection
-Install Dependencies:
-
-bash
-Copy
+# Install dependencies
 pip install -r requirements.txt
-Run the Flask App:
 
-bash
-Copy
-python app.py
-Access the Web Interface:
+# Run the model
+python fraud_detection_model.py
 
-Open your browser and go to http://127.0.0.1:5000/.
+🔭 Future Work
+Real-time integration with Flask/FastAPI
 
-Submit transaction details to get real-time fraud predictions.
+Model explainability with SHAP
 
-Future Improvements
-Improve Precision:
+Live monitoring dashboard using Streamlit
 
-Adjust the classification threshold to reduce false positives.
+Continuous training pipeline
 
-Use cost-sensitive learning to prioritize fraud detection.
-
-Handle Concept Drift:
-
-Periodically retrain the model with new data to adapt to changing fraud patterns.
-
-Enhance Feature Engineering:
-
-Add more features (e.g., user behavior patterns, location data).
-
-Deploy in Production:
-
-Use a cloud platform (e.g., AWS, GCP) for scalable deployment.
+👨‍💻 Team
+Team Name: SYNTAX SURFERS
+Institution: Kalasalingam University
+Event: Pragyan, NIT Trichy (Feb 21–22)
