@@ -1,4 +1,4 @@
-# 💳 FraudGuard: AIML-Powered Fraud Detection System
+# 💳 AIML-Powered Fraud Detection System
 
 FraudGuard is an AI-powered fraud detection system designed to identify suspicious financial transactions using advanced machine learning techniques. Built for precision and scalability, the system evaluates transactional patterns and flags potential fraud in real time — with a focus on performance, security, and interpretability.
 
@@ -73,10 +73,9 @@ python fraud_detection_model.py
 🧠 Model explainability via SHAP and LIME
 
 🧹 Automated retraining pipeline using CI/CD
-
 🔒 Integration with authentication layers for enterprise use
 ---
-👥 Team
+**👥 Team**
 Team Name: SYNTAX SURFERS,
 Institution: Kalasalingam University,
 Event: Pragyan, NIT Tiruchirappalli (Feb 21–22).
