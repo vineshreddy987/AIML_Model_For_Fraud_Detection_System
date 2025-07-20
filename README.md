@@ -67,15 +67,15 @@ python fraud_detection_model.py
 **🔭 Future Enhancements**
 
 🌐 Real-time prediction using Flask or FastAPI
-
 📊 Interactive dashboard with Streamlit
-
 🧠 Model explainability via SHAP and LIME
-
-🧹 Automated retraining pipeline using CI/CD
+🧹 Automated retraining pipeline using CI/CD 
 🔒 Integration with authentication layers for enterprise use
+
+
 ---
 **👥 Team**
+
 Team Name: SYNTAX SURFERS,
 Institution: Kalasalingam University,
 Event: Pragyan, NIT Tiruchirappalli (Feb 21–22).
